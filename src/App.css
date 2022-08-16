@@ -17,3 +17,11 @@ a {
   color: white;
   min-height: 100vh;
 }
+
+.logo {
+  flex: 1;
+  color: dodgerblue;
+  font-family: "Dosis", sans-serif !important;
+  font-weight: bold !important;
+  cursor: pointer;
+}
