@@ -6,15 +6,16 @@ import Home from "./Pages/Home";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div>
+    <div>
+      <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" component={Home} exact />
-          <Route path="/currency/:id" component={Coininfo} />
+          <Route path="/" exact />
+          <Route path="Home" element={<Home />} exact />
+          <Route path="Coininfo/:id" element={<Coininfo />} />
         </Routes>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </div>
   );
 }
 
