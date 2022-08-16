@@ -1,21 +1,20 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-import Coininfo from "./Pages/Coininfo";
+import Chart from "./Pages/Chart";
 import Home from "./Pages/Home";
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
+    <BrowserRouter>
+      <div>
         <Header />
         <Routes>
-          <Route path="/" exact />
-          <Route path="Home" element={<Home />} exact />
-          <Route path="Coininfo/:id" element={<Coininfo />} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/coin/:id" element={<Chart />} />
         </Routes>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
