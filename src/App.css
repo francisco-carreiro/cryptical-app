@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;800&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +20,28 @@ a {
 .logo {
   flex: 1;
   color: dodgerblue;
-  font-family: "Dosis", sans-serif !important;
+  font-family: "Oswald", sans-serif !important;
   font-weight: bold !important;
   cursor: pointer;
+}
+
+.banner {
+  background-image: url("../public/banner.jpg");
+  /* height: 40vh; */
+}
+
+.bannerContent {
+  height: 400;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25;
+  justify-content: space-around;
+}
+
+.tagline {
+  display: flex;
+  height: 40%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
