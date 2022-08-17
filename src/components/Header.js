@@ -9,8 +9,6 @@ const Header = () => {
   const navigate = useNavigate();
   const { currency, setCurrency } = CryptoState();
 
-  console.log(currency);
-
   const darkTheme = createTheme({
     palette: {
       mode: "dark",

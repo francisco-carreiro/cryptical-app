@@ -9,7 +9,6 @@
 
 a {
   text-decoration: none;
-  color: dodgerblue;
 }
 
 .classes {
@@ -60,7 +59,3 @@ a {
   color: white;
 }
 
-.profit {
-  font-weight: 700;
-  color: rgb(137, 228, 0);
-}

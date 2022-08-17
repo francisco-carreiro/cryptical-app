@@ -37,7 +37,12 @@ const Couresel = () => {
         <span>
           {coin?.symbol}
           &nbsp;
-          <span className="profit">
+          <span
+            style={{
+              color: profit > 0 ? "limegreen" : "red",
+              fontWeight: 700,
+            }}
+          >
             {profit && "+"} {coin?.price_change_percentage_24h?.toFixed(2)}%
           </span>
         </span>
