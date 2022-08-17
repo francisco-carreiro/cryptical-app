@@ -33,11 +33,13 @@ const CryptoTable = () => {
   useEffect(() => {
     fetchCrypto();
   }, [currency]);
+
   const darkTheme = createTheme({
     palette: {
       mode: "dark",
     },
   });
+
   const handleSearch = () => {
     return crypto.filter(
       (coin) =>
@@ -45,6 +47,7 @@ const CryptoTable = () => {
         coin.symbol.toLowerCase().includes(search)
     );
   };
+
   return (
     <ThemeProvider theme={darkTheme}>
       <Container style={{ textAlign: "center" }}>
@@ -55,7 +58,7 @@ const CryptoTable = () => {
           Market Prices
         </Typography>
         <TextField
-          label="Search Crypto Currencies"
+          label="Enter Crypto Currency"
           variant="filled"
           style={{ marginBottom: 20, width: "100%" }}
           onChange={(e) => setSearch(e.target.value)}
@@ -67,7 +70,7 @@ const CryptoTable = () => {
             <Table>
               <TableHead
                 style={{
-                  backgroundColor: "rgba(255, 255, 255, 0.2)",
+                  backgroundColor: "#056EE085",
                   color: "white",
                 }}
               >
@@ -77,6 +80,7 @@ const CryptoTable = () => {
                       style={{
                         color: "white",
                         fontWeight: "600",
+                        fontSize: 18,
                         fontFamily: "Oswald, sans-serif",
                       }}
                       key={head}
@@ -131,7 +135,7 @@ const CryptoTable = () => {
                       <TableCell
                         align="right"
                         style={{
-                          color: profit > 0 ? "limegreen" : "red",
+                          color: profit > 0 ? "limegreen" : "crimson",
                           fontWeight: 800,
                         }}
                       >

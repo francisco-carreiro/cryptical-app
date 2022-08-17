@@ -39,7 +39,7 @@ const Couresel = () => {
           &nbsp;
           <span
             style={{
-              color: profit > 0 ? "limegreen" : "red",
+              color: profit > 0 ? "limegreen" : "crimson",
               fontWeight: 700,
             }}
           >
@@ -70,7 +70,7 @@ const Couresel = () => {
       items: 7,
     },
     1919: {
-      items: 11,
+      items: 10,
     },
   };
 

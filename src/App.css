@@ -33,28 +33,10 @@ a {
 .coinLogo {
   display: block;
   max-width: 150px !important;
-  border: 2px rgb(255, 255, 255) solid;
-  border-radius: 50%;
   margin-bottom: 15px;
-  margin-top: 75px;
+  margin-top: 22px;
   margin-left: auto;
   margin-right: auto;
-  -webkit-animation: rotate 2.5s linear 0s infinite normal;
-  -moz-animation: rotate 2.5s linear 0s infinite normal;
-  -ms-animation: rotate 2.5s linear 0s infinite normal;
-  animation: rotate 2.5s linear 0s infinite normal;
-}
-
-@-webkit-keyframes rotate {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 .bannerContent {
@@ -70,6 +52,7 @@ a {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .carousel {
@@ -85,14 +68,22 @@ a {
   cursor: pointer;
   text-transform: uppercase;
   color: white;
+  background-color: #00000065;
+  width: 120px;
+  max-width: 150px;
+  height: 165px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px rgba(255, 255, 255, 0.5) solid;
+  border-radius: 10%;
 }
 
 .row {
-  background-color: #1a1a1b;
+  background-color: #007bff45;
   cursor: pointer;
   font-family: "Oswald", sans-serif !important;
 }
 
 .row:hover {
-  background-color: #131111;
+  background-color: #2e9dffaf;
 }
