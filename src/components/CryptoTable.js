@@ -16,33 +16,28 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { CryptoList } from "../api/api";
 import { CryptoState } from "../CryptoContext";
+import { numberWithCommas } from "./Banner/Couresel";
 
 const CryptoTable = () => {
   const [crypto, setCrypto] = useState([]);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
-
-  const { currency } = CryptoState();
-
+  const { currency, symbol } = CryptoState();
   const fetchCrypto = async () => {
     setLoading(true);
     const { data } = await axios.get(CryptoList(currency));
-
     setCrypto(data);
     setLoading(false);
   };
-
   useEffect(() => {
     fetchCrypto();
   }, [currency]);
-
   const darkTheme = createTheme({
     palette: {
       mode: "dark",
     },
   });
-
   const handleSearch = () => {
     return crypto.filter(
       (coin) =>
@@ -50,7 +45,6 @@ const CryptoTable = () => {
         coin.symbol.toLowerCase().includes(search)
     );
   };
-
   return (
     <ThemeProvider theme={darkTheme}>
       <Container style={{ textAlign: "center" }}>
@@ -66,7 +60,6 @@ const CryptoTable = () => {
           style={{ marginBottom: 20, width: "100%" }}
           onChange={(e) => setSearch(e.target.value)}
         />
-
         <TableContainer>
           {loading ? (
             <LinearProgress style={{ backgroundColor: "dodgerblue" }} />
@@ -74,7 +67,7 @@ const CryptoTable = () => {
             <Table>
               <TableHead
                 style={{
-                  backgroundColor: "dodgerblue",
+                  backgroundColor: "rgba(255, 255, 255, 0.2)",
                   color: "white",
                 }}
               >
@@ -82,8 +75,8 @@ const CryptoTable = () => {
                   {["Coin", "Price", "24 Change", "Market Cap"].map((head) => (
                     <TableCell
                       style={{
-                        color: "darkblue",
-                        fontWeight: "700",
+                        color: "white",
+                        fontWeight: "600",
                         fontFamily: "Oswald, sans-serif",
                       }}
                       key={head}
@@ -97,7 +90,6 @@ const CryptoTable = () => {
               <TableBody>
                 {handleSearch().map((row) => {
                   const profit = row.price_change_percentage_24h > 0;
-
                   return (
                     <TableRow
                       onClick={() => navigate("/Chart/${row.id}")}
@@ -122,7 +114,7 @@ const CryptoTable = () => {
                           style={{ display: "flex", flexDirection: "column" }}
                         >
                           <span
-                            style={{ textTransform: "uppercase", fontSize: 22 }}
+                            style={{ textTransform: "uppercase", fontSize: 24 }}
                           >
                             {row.symbol}
                           </span>
@@ -131,13 +123,30 @@ const CryptoTable = () => {
                       </TableCell>
                       <TableCell
                         align="right"
+                        style={{ textTransform: "uppercase", fontWeight: 800 }}
+                      >
+                        {symbol}{" "}
+                        {numberWithCommas(row.current_price.toFixed(2))}
+                      </TableCell>
+                      <TableCell
+                        align="right"
                         style={{
                           color: profit > 0 ? "limegreen" : "red",
-                          fontWeight: 700,
+                          fontWeight: 800,
                         }}
                       >
                         {profit && "+"}
                         {row.price_change_percentage_24h.toFixed(2)}%
+                      </TableCell>
+                      <TableCell
+                        align="right"
+                        style={{ textTransform: "uppercase", fontWeight: 800 }}
+                      >
+                        {symbol}{" "}
+                        {numberWithCommas(
+                          row.market_cap.toString().slice(0, -6)
+                        )}{" "}
+                        M
                       </TableCell>
                     </TableRow>
                   );

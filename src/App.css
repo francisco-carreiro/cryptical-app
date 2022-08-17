@@ -59,3 +59,12 @@ a {
   color: white;
 }
 
+.row {
+  background-color: #1a1a1b;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif !important;
+}
+
+.row:hover {
+  background-color: #131111;
+}
