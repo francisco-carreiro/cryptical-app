@@ -1,4 +1,4 @@
-import { AppBar, MenuItem, Select, Toolbar, Typography } from "@mui/material";
+import { AppBar, MenuItem, Select, Toolbar } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Container } from "@mui/system";
 import React from "react";
@@ -20,13 +20,12 @@ const Header = () => {
       <AppBar color="transparent" position="static">
         <Container>
           <Toolbar>
-            <Typography
-              onClick={() => navigate("/")}
+            <img
               className="logo"
-              variant="h5"
-            >
-              CRYPTO EYE
-            </Typography>
+              src="/logo.png"
+              alt="logo"
+              onClick={() => navigate("/")}
+            />
             <Select
               variant="outlined"
               style={{

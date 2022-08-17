@@ -8,23 +8,14 @@ const Banner = () => {
     <div className="banner">
       <Container className="bannerContent">
         <div className="tagline">
+          <img className="coinLogo" src="/coinLogo.png" alt="cryptical coin" />
           <Typography
-            variant="h2"
+            variant="subtitle1"
             style={{
-              fontWeight: "bold",
-              marginBottom: 15,
+              color: "white",
+              textTransform: "uppercase",
               fontFamily: "Oswald, sans-serif",
-              marginTop: 45,
-            }}
-          >
-            CRYPTO EYE
-          </Typography>
-          <Typography
-            variant="subtitle2"
-            style={{
-              color: "darkgray",
-              textTransform: "capitalize",
-              fontFamily: "Oswald, sans-serif",
+              fontWeight: 400,
             }}
           >
             All the information about your cryptos in one place!
