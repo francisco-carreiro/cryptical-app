@@ -14,6 +14,7 @@ const Banner = () => {
               fontWeight: "bold",
               marginBottom: 15,
               fontFamily: "Oswald, sans-serif",
+              marginTop: 45,
             }}
           >
             CRYPTO EYE
