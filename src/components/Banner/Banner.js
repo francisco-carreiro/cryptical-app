@@ -1,4 +1,5 @@
 import { Container, Typography } from "@mui/material";
+import Carousel from "./Couresel";
 
 import React from "react";
 
@@ -28,6 +29,7 @@ const Banner = () => {
             All the information about your cryptos in one place!
           </Typography>
         </div>
+        <Carousel />
       </Container>
     </div>
   );
