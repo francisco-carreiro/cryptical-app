@@ -32,7 +32,12 @@ const Couresel = () => {
           src={coin?.image}
           alt={coin.name}
           height="80"
-          style={{ marginBottom: 10, marginTop: 10 }}
+          style={{
+            marginBottom: 10,
+            marginTop: 10,
+            marginLeft: 10,
+            marginRight: 10,
+          }}
         />
         <span>
           {coin?.symbol}

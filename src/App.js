@@ -11,7 +11,7 @@ function App() {
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/coin/:id" element={<Chart />} />
+          <Route path="/Chart/:id" element={<Chart />} />
         </Routes>
       </div>
     </BrowserRouter>

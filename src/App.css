@@ -92,3 +92,33 @@ a {
 .MuiPaginationItem-root {
   color: #2e9dffaf !important;
 }
+
+.containerChart {
+  display: flex;
+}
+
+.sidebar {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25;
+  border-right: 2px solid grey;
+}
+
+.heading {
+  font-weight: bold;
+  margin-bottom: 20;
+  font-family: "Oswald", sans-serif !important;
+}
+
+/* medium screen chart fix */
+@media only screen and (min-width: 768px) {
+  .containerChart {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+}
