@@ -88,3 +88,7 @@ a {
 .row:hover {
   background-color: #2e9dffaf;
 }
+
+.MuiPaginationItem-root {
+  color: #2e9dffaf !important;
+}
