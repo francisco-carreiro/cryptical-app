@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap");
+
 * {
   max-width: 1920px !important;
   margin: 0;
@@ -40,23 +41,23 @@ a {
 }
 
 .bannerContent {
-  height: 450px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.tagline {
+/* .tagline {
   display: flex;
   height: 50%;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   margin-bottom: 15px;
-}
+} */
 
 .carousel {
-  height: 50%;
+  height: 100%;
   display: flex;
   align-items: center;
 }
