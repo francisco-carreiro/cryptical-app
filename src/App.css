@@ -111,6 +111,10 @@ a {
   font-family: "Oswald", sans-serif !important;
 }
 
+.chartPicture {
+  margin-bottom: 20px;
+}
+
 /* medium screen chart fix */
 @media only screen and (min-width: 768px) {
   .containerChart {

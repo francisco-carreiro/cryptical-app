@@ -28,10 +28,10 @@ const Chart = () => {
     <div className="containerChart">
       <div className="sidebar">
         <img
+          className="chartPicture"
           src={coin?.image.large}
           alt={coin?.name}
           height="200"
-          style={{ marginBottom: 20 }}
         />
         <Typography variant="h3" className="heading">
           {coin?.name}
