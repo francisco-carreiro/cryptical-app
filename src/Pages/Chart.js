@@ -66,7 +66,7 @@ const Chart = () => {
           </span>
 
           {/* Market Cap */}
-          {/* <span style={{ display: "flex" }}>
+          <span style={{ display: "flex" }}>
             <Typography variant="h5" className="heading">
               Market Cap:{" "}
             </Typography>
@@ -80,10 +80,11 @@ const Chart = () => {
               )}
               M
             </Typography>
-          </span> */}
+          </span>
         </div>
       </div>
 
+      {/* Chart */}
       <CryptoInfo coin={coin} />
     </div>
   );

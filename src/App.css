@@ -121,6 +121,24 @@ a {
   text-align: justify;
 }
 
+.marketData {
+  align-self: flex-start;
+  padding: 25;
+  padding-top: 10;
+  width: 100%;
+}
+
+.containerGraph {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25;
+  padding: 40;
+
+}
+
 /* medium screen chart fix */
 @media only screen and (min-width: 768px) {
   .containerChart {
@@ -130,5 +148,33 @@ a {
 
   .sidebar {
     width: 100%;
+  }
+
+  .marketData {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .containerGraph {
+    width: 100%;
+    margin-top: 0;
+    padding: 20;
+    padding-top: 0;
+
+  }
+}
+
+/* small screen chart fix */
+@media only screen and (min-width: 600px) {
+  .marketData {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* extra small screen chart fix */
+@media only screen and (max-width: 600px) {
+  .marketData {
+    align-items: flex-start;
   }
 }
