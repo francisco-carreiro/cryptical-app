@@ -9,16 +9,14 @@ import { CryptoState } from "../CryptoContext";
 const Chart = () => {
   const { id } = useParams();
   const [coin, setCoin] = useState();
-
   const { currency, symbol } = CryptoState();
 
   const fetchCoin = async () => {
     const { data } = await axios.get(SingleCrypto(id));
-
     setCoin(data);
   };
 
-  console.log(coin);
+  const rawHTML = coin?.description.en.split(". ")[0] + ".";
 
   useEffect(() => {
     fetchCoin();
@@ -37,7 +35,7 @@ const Chart = () => {
           {coin?.name}
         </Typography>
         <Typography variant="subtitle1" className="description">
-          {coin?.description.en.split(". ")[0]}.
+          <div dangerouslySetInnerHTML={{ __html: rawHTML }}></div>
         </Typography>
       </div>
 
