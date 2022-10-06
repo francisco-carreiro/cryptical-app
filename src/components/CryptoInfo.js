@@ -1,5 +1,4 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable no-unused-vars, react-hooks/rules-of-hooks*/
+/* eslint-disable react-hooks/exhaustive-deps, no-unused-vars, react-hooks/rules-of-hooks*/
 
 import { CircularProgress } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
