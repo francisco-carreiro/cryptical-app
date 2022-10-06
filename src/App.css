@@ -47,15 +47,6 @@ a {
   justify-content: space-around;
 }
 
-/* .tagline {
-  display: flex;
-  height: 50%;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 15px;
-} */
-
 .carousel {
   height: 100%;
   display: flex;
@@ -111,7 +102,7 @@ a {
   max-height: 200px !important;
   max-width: 200px !important;
   min-width: 100px;
-  margin-bottom: 20px;
+  margin: 20px 20px 20px 20px !important;
   width: 50%;
 }
 
@@ -119,6 +110,15 @@ a {
   font-weight: bold;
   margin-bottom: 20;
   font-family: "Oswald", sans-serif !important;
+}
+
+.description {
+  width: 100%;
+  font-family: "Oswald", sans-serif !important;
+  padding: 25;
+  padding-bottom: 15;
+  padding-top: 0;
+  text-align: justify;
 }
 
 /* medium screen chart fix */
