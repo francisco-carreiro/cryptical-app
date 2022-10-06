@@ -31,7 +31,7 @@ const Chart = () => {
           className="chartPicture"
           src={coin?.image.large}
           alt={coin?.name}
-          height="200"
+          /* height="200" */
         />
         <Typography variant="h3" className="heading">
           {coin?.name}

@@ -95,6 +95,7 @@ a {
 
 .containerChart {
   display: flex;
+  width: 100%;
 }
 
 .sidebar {
@@ -103,16 +104,21 @@ a {
   flex-direction: column;
   margin-top: 25;
   border-right: 2px solid grey;
+  align-items: center;
+}
+
+.chartPicture {
+  max-height: 200px !important;
+  max-width: 200px !important;
+  min-width: 100px;
+  margin-bottom: 20px;
+  width: 50%;
 }
 
 .heading {
   font-weight: bold;
   margin-bottom: 20;
   font-family: "Oswald", sans-serif !important;
-}
-
-.chartPicture {
-  margin-bottom: 20px;
 }
 
 /* medium screen chart fix */
