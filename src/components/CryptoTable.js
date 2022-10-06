@@ -102,7 +102,7 @@ const CryptoTable = () => {
                     const profit = row.price_change_percentage_24h > 0;
                     return (
                       <TableRow
-                        onClick={() => navigate("/Chart/${row.id}")}
+                        onClick={() => navigate("/Chart/" + row.id)}
                         className="row"
                         key={row.name}
                       >

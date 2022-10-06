@@ -27,7 +27,7 @@ const Couresel = () => {
     let profit = coin.price_change_percentage_24h >= 0;
 
     return (
-      <Link className="carouselItems" to={"/coin/${coin.id}"}>
+      <Link className="carouselItems" to={"/Chart/" + coin.id}>
         <img
           src={coin?.image}
           alt={coin.name}
