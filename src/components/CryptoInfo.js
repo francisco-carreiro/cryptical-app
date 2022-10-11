@@ -49,15 +49,13 @@ const CryptoInfo = ({ coin }) => {
                     date.getHours() > 12
                       ? `${date.getHours() - 12}:${date.getMinutes()} PM`
                       : `${date.getHours()}:${date.getMinutes()} AM`;
-
                   return days === 1 ? time : date.toLocaleDateString();
                 }),
-
                 datasets: [
                   {
                     data: dateData.map((coin) => coin[1]),
                     label: `Price ( Past ${days} Days) in ${currency}`,
-                    borderColor: "red",
+                    borderColor: "#2e9dffaf",
                   },
                 ],
               }}
