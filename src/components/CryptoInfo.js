@@ -35,7 +35,7 @@ const CryptoInfo = ({ coin }) => {
       <div className="containerGraph">
         {!dateData ? (
           <CircularProgress
-            style={{ color: "#2e9dffaf" }}
+            style={{ color: "#007bff45" }}
             size={250}
             thickness={1}
           />
@@ -62,7 +62,7 @@ const CryptoInfo = ({ coin }) => {
               options={{
                 elements: {
                   point: {
-                    radius: 1,
+                    radius: 3.5,
                   },
                 },
               }}
