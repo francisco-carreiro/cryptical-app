@@ -6,6 +6,7 @@
   padding: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: "Oswald", sans-serif !important;
 }
 
 a {
@@ -73,7 +74,6 @@ a {
 .row {
   background-color: #007bff45;
   cursor: pointer;
-  font-family: "Oswald", sans-serif !important;
 }
 
 .row:hover {
@@ -86,17 +86,15 @@ a {
 
 .containerChart {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
 }
 
 .sidebar {
-  width: 25%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   margin-top: 25px;
-  border-right: 2px solid grey;
+  border-right: 1px solid #2e9dffaf;
   align-items: center;
 }
 
@@ -111,13 +109,12 @@ a {
 
 .heading {
   font-weight: bold;
-  margin-bottom: 20px;
-  font-family: "Oswald", sans-serif !important;
+  padding-bottom: 25px;
 }
 
 .description {
   width: 100%;
-  font-family: "Oswald", sans-serif !important;
+
   padding: 25px;
   padding-bottom: 15px;
   padding-top: 0px;
@@ -130,8 +127,8 @@ a {
   padding-top: 10px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  /*  justify-content: space-around;
+  align-items: flex-start; */
 }
 
 .containerGraph {
@@ -157,8 +154,6 @@ a {
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  font-family: "Oswald",
-    sans-serif !important;
   cursor: pointer;
   background-color: #007bff45;
   text-align: center;
@@ -170,13 +165,12 @@ a {
 }
 
 .selectButton:active {
-  border: 1px solid white !important;
+  border: 1px solid #2e9dffaf;
   background-color: #1a1a1b;
 }
 
-/* medium screen chart fix */
-@media only screen and (min-width: 768px) {
 
+@media only screen and (max-width: 768px) {
 
   .containerChart {
     flex-direction: column;
@@ -197,20 +191,16 @@ a {
     margin-top: 0px;
     padding: 20px;
     padding-top: 0px;
-
   }
 }
 
-/* small screen chart fix */
 @media only screen and (min-width: 600px) {
   .marketData {
     flex-direction: column;
     align-items: center;
   }
-
 }
 
-/* extra small screen chart fix */
 @media only screen and (max-width: 600px) {
   .marketData {
     align-items: flex-start;
