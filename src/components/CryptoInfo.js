@@ -6,7 +6,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import { HistoricalChart } from "../api/api.js";
+import { chartDays } from "../api/days.js";
 import { CryptoState } from "../CryptoContext";
+import Selector from "./Selector.js";
 
 const CryptoInfo = ({ coin }) => {
   const [dateData, setDateData] = useState();
@@ -67,6 +69,16 @@ const CryptoInfo = ({ coin }) => {
                 },
               }}
             />
+
+            <div className="chartButtons">
+              {chartDays.map((day) => (
+                <Selector
+                key={day.value}
+                onClick={() => setDays(day.value)}
+                selected = {day.value === days}
+                >{day.label}</Selector>
+              ))}
+            </div>
           </>
         )}
       </div>

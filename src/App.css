@@ -2,8 +2,8 @@
 
 * {
   max-width: 1920px !important;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -86,46 +86,52 @@ a {
 
 .containerChart {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 
 .sidebar {
-  width: 30%;
+  width: 25%;
   display: flex;
   flex-direction: column;
-  margin-top: 25;
+  margin-top: 25px;
   border-right: 2px solid grey;
   align-items: center;
 }
 
 .chartPicture {
-  max-height: 200px !important;
-  max-width: 200px !important;
+  max-height: 150px !important;
+  max-width: 150px !important;
   min-width: 100px;
-  margin: 20px 20px 20px 20px !important;
-  width: 50%;
+  min-height: 100px;
+  margin: 20px 20px 20px 20px;
+  width: 100%;
 }
 
 .heading {
   font-weight: bold;
-  margin-bottom: 20;
+  margin-bottom: 20px;
   font-family: "Oswald", sans-serif !important;
 }
 
 .description {
   width: 100%;
   font-family: "Oswald", sans-serif !important;
-  padding: 25;
-  padding-bottom: 15;
-  padding-top: 0;
+  padding: 25px;
+  padding-bottom: 15px;
+  padding-top: 0px;
   text-align: justify;
 }
 
 .marketData {
   align-self: flex-start;
-  padding: 25;
-  padding-top: 10;
+  padding: 25px;
+  padding-top: 10px;
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 .containerGraph {
@@ -134,13 +140,44 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 25;
-  padding: 40;
+  margin-top: 25px;
+  padding: 40px;
+}
 
+.chartButtons {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.selectButton {
+  border: 1px solid #2e9dffaf;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Oswald",
+    sans-serif !important;
+  cursor: pointer;
+  background-color: #007bff45;
+  text-align: center;
+  width: 23%;
+}
+
+.selectButton:hover {
+  background-color: #2e9dffaf;
+}
+
+.selectButton:active {
+  border: 1px solid white !important;
+  background-color: #1a1a1b;
 }
 
 /* medium screen chart fix */
 @media only screen and (min-width: 768px) {
+
+
   .containerChart {
     flex-direction: column;
     align-items: center;
@@ -157,9 +194,9 @@ a {
 
   .containerGraph {
     width: 100%;
-    margin-top: 0;
-    padding: 20;
-    padding-top: 0;
+    margin-top: 0px;
+    padding: 20px;
+    padding-top: 0px;
 
   }
 }
@@ -170,6 +207,7 @@ a {
     flex-direction: column;
     align-items: center;
   }
+
 }
 
 /* extra small screen chart fix */
