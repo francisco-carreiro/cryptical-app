@@ -23,4 +23,4 @@ A crypto value watching website/app with single crypto charts.
 
 
 ## 🔗 Live Preview
-[![portfolio](https://img.shields.io/badge/Cryptical-blue)](coming soon)
+[![portfolio](https://img.shields.io/badge/Cryptical-app-blue)](coming soon)
