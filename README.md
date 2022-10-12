@@ -19,8 +19,8 @@ A crypto value watching website/app with single crypto charts.
 
 ## Screenshots
 
-![App Screenshot](coming soon)
+![App Screenshot](https://snipboard.io/UfGqFy.jpg)
 
 
 ## 🔗 Live Preview
-[![portfolio](https://img.shields.io/badge/Cryptical-app-blue)](coming soon)
+[![portfolio](https://img.shields.io/badge/Cryptical-app-blue)](https://cryptical.netlify.app/)
