@@ -15,15 +15,14 @@
     "react-chartjs-2": "^2.11.2",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.18.4",
-    "react-scripts": "^0.0.0",
     "url-parse": "^1.5.10",
     "webpack": ">=5.76.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview"
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +41,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "vite": "^6.4.5",
+    "@vitejs/plugin-react": "^4.4.1"
   }
 }
