@@ -1,0 +1,26 @@
+name: Vite migration validation
+on:
+  pull_request:
+  push:
+    branches: [fix/migrate-cra-to-vite-20261027]
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Resolve and verify updated lockfile
+        run: |
+          npm install --package-lock-only --ignore-scripts
+          git diff --exit-code -- package-lock.json
+      - name: Install committed dependency graph
+        run: npm ci
+      - name: Build migrated frontend
+        run: npm run build
